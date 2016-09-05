@@ -1,0 +1,87 @@
+create table registration(name varchar2(20),username varchar2(20) primary key,password varchar2(20),secretquestion varchar2(50),answer varchar2(50),address varchar2(50),pincode number(9),phone number(11),email varchar2(30));
+
+create table login(username varchar2(20) primary key ,password varchar2(25));
+
+
+CREATE TABLE  "COMPLAINT" 
+   (	"CID" VARCHAR2(15), 
+	"DETAILSSUSPECT" VARCHAR2(20), 
+	"DESCRIPTION" VARCHAR2(25), 
+	"DATC" DATE, 
+	"TYPEOFCRIME" VARCHAR2(10), 
+	 PRIMARY KEY ("CID") ENABLE
+   );
+   insert into complaint values('2000','Rahul','stolen a car','24/aug/2010', 'civil');
+   
+   CREATE TABLE  "COMPAINTSTATUS" 
+   (	"CID" NUMBER, 
+	"STATUS" VARCHAR2(4000), 
+	 CONSTRAINT "COMPAINTSTATUS_PK" PRIMARY KEY ("CID") ENABLE
+   );
+
+
+create table feedback(name varchar2(15),email varchar2(17),message varchar2(60));
+
+  create table crimereport(userid varchar2(15) primary key,ninformant varchar2(15),addressinf varchar2(30),detailssuspect varchar2(15),description varchar(15),datec date);
+   
+
+   
+   insert into crimereport values('3000','gowri','aaaaaaaaaa','jajdggffsgdh','eeeeeeeeeeee','10aug2010');
+  
+  
+  CREATE TABLE  "REPORTSTATUS" 
+   (	"RID" NUMBER, 
+	"STATUS" VARCHAR2(4000), 
+	 CONSTRAINT "REPORTSTATUS_PK" PRIMARY KEY ("RID") ENABLE
+   );
+   
+   
+   
+   create table mostwanted(name varchar2(10),age varchar2(10),address varchar2(15),typeofcrime varchar2(10),complexion varchar2(10),hair varchar2(10),built varchar2(10),passportno varchar2(10),casedescription varchar2(80));
+   
+   
+   insert into mostwanted values('aaaa','12','aaaaaaa','ssss','fair','sssshj','ffff','pppp','hhhhh');
+   
+   
+   CREATE TABLE  "ADMIN" 
+   (	"USERNAME" VARCHAR2(4000), 
+	"PASSWORD" VARCHAR2(4000)
+   );
+   
+   
+   insert into admin values('sandeep','123456'); 
+   
+   
+   create table hotnews(matter varchar2(40),time varchar2(10),place varchar2(15));
+   
+   
+   
+   create table mostwanted(name varchar(10),age varchar(10),address varchar(15),typeofcrime varchar(10),complexion varchar(10),hair varchar(10),built varchar(10),passportno varchar(10),casedescription varchar(10));
+
+   create table missingperson(firno varchar(10),district varchar(10),nameofpol varchar(10),datem date,dater date,sex varchar(4), age varchar(6),complex varchar(10),height varchar(5),fat varchar(10),idmark varchar(10),apparels varchar(15),namaddr varchar(15),bc varchar(14));
+
+
+   
+   
+   create table missingperson(firno varchar(10),district varchar(10),nameofpol varchar(10),datem date,dater date,sex varchar(6), age varchar(6),complex varchar(10),height varchar(5),fat varchar(10),idmark varchar(10),apparels varchar(15),namaddr varchar(15),bc varchar(14));
+
+insert into missingperson values('f123','tvm','vanchiyoor','10/aug/2014','10/aug/2013','M','20','fair','169','fat','blackscar','stud and chain','asggfdffghggggg','ss');
+   
+   
+   
+   create table criminalregister(criminalno varchar(10) primary key,name varchar(15),nickname varchar(15),age varchar(10),occupation varchar(15),crimetype varchar(15),address varchar(15),mostyesorno varchar(12));
+
+create table takecomplaintaction(user1 varchar(19),complaintid varchar(12) primary key,takeaction varchar(35));
+   
+   create table prisonerregister(prisonerno varchar(10),chargesheetno varchar(15) primary key,nickname varchar(15),typeofcrime varchar(15),familymembers varchar(20),identificationmarks varchar(25),height varchar(15),weight varchar(15),colour varchar(10));
+   
+   create table history(prisoner varchar(15) primary key,typecrime varchar(15),dateofoccu varchar(15),placeofocc varchar(15),briefdisofcase varchar(20));
+   
+   
+   
+   create table FIR(district varchar(10),Datc date,time varchar(10),typeofinformation varchar(15),placeofoccurence varchar(10),foreignlocal varchar(15),act varchar(10),firno varchar(10),section varchar(10),diaryrefno varchar(15),informantadd varchar(15),passportno varchar(10),complaintno varchar(10),police varchar(10),receivedtime varchar(10),informationrec varchar(10),distancefrmpolst varchar(10));
+
+
+
+insert into FIR values('TVM','10/aug/2014','9.30am','mail','asddft','local','niuih','f90','ipc12','d123','hgxsgxkhs','p56','c234','asdfg','3.25pm','hfhf','56');
+   

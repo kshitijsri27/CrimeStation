@@ -1,0 +1,120 @@
+
+create database crimefile;
+
+create table login(username varchar2(20) primary key ,password varchar2(25));
+
+insert into login values('parvez','parvez');
+
+
+
+
+
+create table registration(name varchar(20),username varchar(20) primary key,secretquestion varchar(50),answer varchar(50),address varchar(50),pincode int(9),phone int(9),email varchar(30),village varchar(15),taluk varchar(15),district varchar(15),state varchar(15));
+
+insert into registration values('vidya','paru','Where is your house','aaaaaa','akalkssfopoftrlklhgk','695010','2431735','vidi@gmail.com','village','taluk','tvm','kerala');
+
+
+
+
+
+create table complaintreg(userid varchar(15) primary key,detailssuspect varchar(20),Description varchar(25),Datc date,typeofcrime varchar(10));
+
+
+insert into complaintreg values('u321','aaaaaaaaaaa','ccccc','1992-02-10','murder');
+
+
+
+
+create table crimereport(userid varchar(15) primary key,ninformant varchar(15),addressinf varchar(30),detailssuspect varchar(15),description varchar(15),datec date);
+
+insert into crimereport values('u321','gowri','aaaaaaaaaa','jajdggffsgdh','eeeeeeeeeeee','1987-11-10');
+
+
+
+//create table complaintstatus(complaintno varchar(10),viewstatus varchar(20));
+//insert into complaintstatus values('e122','cust');
+
+
+
+create table admnregistration(username varchar(20) ,question varchar(20),answer varchar(20),name varchar(15),designation varchar(20),officialaddress varchar(25),phonen int(11),residentialaddress varchar(25),pincode int(9),phone int(11),email varchar(30));
+insert into admnregistration values('paru','123456','dwwrttyuy','asff','vidya','IG','akalkssfopoftrlklhgk','2462248','retryuuyiioopplkj','695010','2431735','vidi@gmail.com');
+
+
+create table prisonerregister(prisonerno varchar(10),chargesheetno varchar(15) primary key,nickname varchar(15),typeofcrime varchar(15),familymembers varchar(20),identificationmarks varchar(25),height varchar(15),weight varchar(15),colour varchar(10));
+insert into prisonerregister values('p10','c1','paru','murder','criminal','asdfdghjkll','qwertyuiop','169','55','white');
+
+
+create table criminalregister(criminalno varchar(10) primary key,name varchar(15),nickname varchar(15),age varchar(10),occupation varchar(15),crimetype varchar(15),address varchar(15),mostyesorno varchar(12));
+insert into criminalregister values('c10','vasu','gundukadu','35','gunda','murder','aaaaaaa');
+
+
+create table addelete(adminname varchar(20),securityanswer varchar(20));
+insert into addelete values('john','cat'); 
+
+
+
+create table deleteuser(username varchar(15) primary key,password varchar(10),securityanswer varchar(15));
+insert into deleteuser values('sabu','123456','car');
+
+
+create table FIR(district varchar(10),Datc date,time varchar(10),typeofinformation varchar(15),placeofoccurence varchar(10),foreignlocal varchar(15),act varchar(10),firno varchar(10),section varchar(10),diaryrefno varchar(15),informantadd varchar(15),passportno varchar(10),complaintno varchar(10),police varchar(10),receivedtime varchar(10),informationrec varchar(10),distancefrmpolst varchar(10));
+insert into FIR values('TVM','1987-12-12','9.30am','mail','asddft','local','niuih','f90','ipc12','d123','hgxsgxkhs','p56','c234','asdfg','3.25pm','hfhf','56');
+
+
+
+create table history(prisoner varchar(15) primary key,typecrime varchar(15),dateofoccu varchar(10),placeofocc varchar(15),briefdisofcase varchar(10));
+
+insert into history values('p12','c123','murder','1990-10-25','gfhg','dghdjdh');
+
+create table premortem(premortemno varchar(10),postmortemno varchar(10),Doctorsname varchar(10),policestation varchar(10),pdatec date);
+insert into premortem values('p145','po2435','smith','safsd','1977-09-04');
+
+create table chargesheet(chargesheetno varchar(10),nameofpolicesta varchar(10),Datc date,FIRno varchar(10),district varchar(10),infname varchar(15),infaddress varchar(20),infoccupation varchar(12),infparticulars varchar(12),accname varchar(10),accaddress varchar(20),male varchar(15),female varchar(15),accage int(5),accoccupation varchar(13),accstatus varchar(15),accaction varchar(10),wtsname varchar(12),wtsaddress varchar(20),wtsoccupation varchar(20));
+insert into chargesheet values('c234','fzsgf','1987-11-10','f10','TVM','vidhya','aaaaa','occupation','dsagf','atsk','gfdcxgdg','55','gxshgx','action','babu','gsfxx','hjsdh');
+
+
+create table missingperson(firno varchar(10),district varchar(10),nameofpol varchar(10),datem date,dater date,sex varchar(4), age varchar(6),complex varchar(10),height varchar(5),fat varchar(10),idmark varchar(10),apparels varchar(15),namaddr varchar(15),bc varchar(14));
+
+insert into missingperson values('f123','tvm','vanchiyoor','1985-06-22','1985-06-30','M','20','fair','169','fat','blackscar','stud and chain','asggfdffghggggg','ffg');
+
+create table mostwanted(name varchar(10),age varchar(10),address varchar(15),typeofcrime varchar(10),complexion varchar(10),hair varchar(10),built varchar(10),passportno varchar(10),casedescription varchar(10));
+insert into mostwanted values('aaaa','12','aaaaaaa','ssss','fair','sssshj','ffff','pppp','hhhhh');
+
+create table mostwanted1(user varchar(10),name varchar(10),age varchar(10),address varchar(15),typeofcrime varchar(10),complexion varchar(10),hair varchar(10),built varchar(10),passportno varchar(10),casedescription varchar(10));
+insert into mostwanted values('aaaa','12','aaaaaaa','ssss','fair','sssshj','ffff','pppp','hhhhh');
+
+
+create table contactus(name varchar(15),email varchar(17),fax varchar(13),address varchar(14),message varchar(16));
+insert into contactus values('sds','vvasb@gmail.com','45667','ddds','gghjjj');
+
+create table feedback(name varchar(15),email varchar(17),message varchar(45));
+insert into feedback values('sds','vvasb@gmail.com','gghjjj');
+
+
+create table hotnews(matter varchar2(40),time varchar2(10),place varchar2(15));
+insert into hotnews values('aasasasasasasasasasasasa','12:10','hjsh');
+
+create table mail(to1 varchar(30),from1 varchar(30),cc varchar(25),bcc varchar(25),subject varchar(30),msg varchar(70));
+insert into mail values('cfms@.com','user@.com','ccc','bccc','sub','mess');
+
+create table postmortem(postno varchar(12),dname varchar(12),postno2 varchar(12),post1 varchar(13));
+
+create table takecomplaintaction(user varchar(19),complaintid varchar(12) primary key,takeaction varchar(35));
+
+
+create table takecrimeaction(user varchar(19),crimeid varchar(12) primary key,takeaction varchar(35));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
